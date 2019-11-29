@@ -1,0 +1,79 @@
+exemplo 1.html
+
+
+<html><body>
+	<script>
+    function aumenta(){
+    	document.getElementById("palavra").style.fontSize = "60px";
+    }
+    </script>
+    <div id="palavra">Olá, mundo!!!</div>
+    <button onclick="aumenta()">Aumenta</button>
+<html><body>
+
+
+
+exemplo2.html
+
+
+
+<html><body>
+
+	<script>
+    function aumenta(){
+    	document.getElementById("palavra").style.color = "blue";
+    }
+    </script>
+    <div id="palavra">Olá, mundo!!!</div>
+    <button onclick="aumenta()">Aumenta</button>
+	
+<html><body>
+
+
+exemplo3.html
+
+
+<html><body>
+
+	<script>
+    function aumenta(){
+    	document.getElementById("palavra").style.backgroundColor = "blue";
+    }
+    </script>
+    <div id="palavra">Olá, mundo!!!</div>
+    <button onclick="aumenta()">Aumenta</button>
+	
+<html><body>
+
+
+exemplo4.html : Altera valor de um elemento
+
+
+<html><body>
+
+	<script>
+    function muda(){
+    	document.getElementById("palavra").innerHTML = "LIGADO";
+    }
+    </script>
+    <p id="palavra">DESLIGADO</div>
+    <button onclick="muda()">Ligar</button>
+	
+</html></body>
+
+
+exemplo5.html
+
+<html><body>
+	<script>
+	function muda(){
+	var x = document.getElementById("entrada").value;
+	document.getElementById("copia").value = x;
+	}
+	</script>
+	Entrada: <input id="entrada" type="text" onchange="muda()" />
+	<br/>
+	Cópia: <input id="copia" type="text"/>
+	</body></html>
+	
+	}
