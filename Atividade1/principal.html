@@ -1,0 +1,160 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">HENTAIZAO</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<div class="tudo">
+<body class="corpo">
+<div class="divisoria">
+<script language="Javascript">
+function checaEmail(){
+	var email1 = document.getElementById("email1").value;
+	var email2 = document.getElementById("email2").value;
+	if(email1 == email2){
+    document.getElementById("msgemailconf").innerHTML="<font color='green'>Os e-mails coincidem</font>";
+	
+	}
+	
+	else {
+	document.getElementById("msgemailconf").innerHTML="<font color='red'>E-mail nao coincide</font>";
+	}
+		
+}
+
+
+function validacaoEmail(field) {
+usuario = field.value.substring(0, field.value.indexOf("@"));
+dominio = field.value.substring(field.value.indexOf("@")+ 1, field.value.length);
+if ((usuario.length >=1) &&
+    (dominio.length >=3) && 
+    (usuario.search("@")==-1) && 
+    (dominio.search("@")==-1) &&
+    (usuario.search(" ")==-1) && 
+    (dominio.search(" ")==-1) &&
+    (dominio.search(".")!=-1) &&      
+    (dominio.indexOf(".") >=1)&& 
+    (dominio.lastIndexOf(".") < dominio.length - 1)) {
+document.getElementById("msgemail").innerHTML="E-mail válido";
+document.getElementById("msgemail").innerHTML="";
+}
+else{
+document.getElementById("msgemail").innerHTML="<font color='red'>Email inválido </font>";
+
+}
+}
+
+
+</script>
+
+
+<div class="jumbotron">
+	<div class="container">
+	<form name="f1" action="valida.php" method="POST">
+	<div class="form-group col-sm-4">	
+		Nome de usuário <input type="text" placeholder="Digite seu nome" name="nome" class="form-control form-control-sm" />
+		Data de nascimensto <input type="text" placeholder="Digite sua data de nascimento" name="idade" class="form-control form-control-sm" />
+		E-mail <input  type="text" name="email" id="email1"  placeholder="Digite seu e-mail" name="idade" class="form-control form-control-sm" onblur="validacaoEmail(f1.email)"  />
+		<div id="msgemail"></div>
+		Confirmação e-mail <input  name="email2" id="email2"type="text" placeholder="E-mail novamente"  class="form-control form-control-sm" onblur="checaEmail()"  maxlength="60" size="90" />
+		<div id="msgemailconf"></div>
+		<input type="submit"  class="btn btn-dark my-5 my-sm-4" value="Enviar" />
+	</div>	
+</div>
+</div>
+</div>
+<div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Notícias</h2>
+        <p>Só tem notícia bacana. Donec id elit non mi porta gravida at eget metus. 
+		Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut 
+		fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis 
+		euismod. Donec sed odio dui.</p>
+        <p><a class="btn btn-secondary" href="#" role="button">Mais notícias &raquo;</a></p>
+      </div>
+      <div class="col-md-4">
+        <h2>Produtos</h2>
+        <p>Só produto de primeira. Donec id elit non mi porta gravida at eget metus. 
+		Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut 
+		fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis 
+		euismod. Donec sed odio dui. </p>
+        <p><a class="btn btn-secondary" href="#" role="button">Mais produtos &raquo;</a></p>
+      </div>
+      <div class="col-md-4">
+        <h2>Depoimentos</h2>
+        <p>Todo mundo satisfeito. Donec sed odio dui. Cras justo odio, dapibus ac facilisis 
+		in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, 
+		tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit 
+		amet risus.</p>
+        <p><a class="btn btn-secondary" href="#" role="button">Mais depoimentos &raquo;</a></p>
+      </div>
+    </div>
+ <hr>
+ </div> <!-- /container -->
+<style>
+	.form-control form-control-sm{
+		background-color:rgba(158, 89, 89, 0) !important;
+        border:none !important;
+	}
+	
+	.tudo{
+	margin: auto;
+	width: 3000 px;
+	}
+
+	.corpo{
+	
+	background-position: center;
+	background-repeat: no-repeat;		
+	}
+	.divisoria {
+		
+		font-family: Arial Black;
+		font-size: 13px;
+	  
+  }
+.jumbotron{
+      background-image: url(bg.jpg);
+	  text-align: center;
+	  color: black;
+	  background-attachment: scroll;
+	  background-position: center;
+	  background-size: cover;
+	  padding: 220px;
+	  height: 220vh;
+      width: 100vw;
+  }
+</style>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</div>
+</form>
+</body>
+</html>
